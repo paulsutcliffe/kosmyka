@@ -37,10 +37,10 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem "bootstrap-sass", "~> 2.3.1.0", :group => :assets
+#gem "bootstrap-sass", "~> 2.3.1.0", :group => :assets
+gem "twitter-bootstrap-rails"
 gem "rvm-capistrano"
 gem "haml"
-gem "haml-rails"
 gem "will_paginate"
 gem "inherited_resources"
 gem "page_title_helper"

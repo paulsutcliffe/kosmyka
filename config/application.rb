@@ -40,6 +40,7 @@ module Kosmyka
     config.filter_parameters += [:password]
     # Customize generators
     config.generators do |g|
+      g.template_engine :haml
       g.stylesheets false
       g.test_framework :rspec,
         fixtures: true,
