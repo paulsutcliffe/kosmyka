@@ -16,6 +16,8 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
+    = javascript_include_tag 'masonry.pkgd.min.js'
+
 
   %body
     %header
@@ -48,30 +50,115 @@
               %br
               Y APLICACIONES WEB DINÁMICAS
       
-      #content-middle.container-fluid
+      #content-middle.container-fluid.masonry-div
         .row-fluid
           .span12
             %p.conoce
               CONOCE LOS ÚLTIMOS TRABAJOS QUE HEMOS HECHO
-
-      #content-bottom.container-fluid
         .row-fluid
           .span12
+            #masonry-container
+              .item
+                = link_to image_tag('img-trabajo-1.jpg'), '#'
+                %p
+                  = link_to content_tag(:span, 'Texto falso'), '/'
+              .item
+                = link_to image_tag('img-trabajo-2.jpg'), '#'
+                %p Texto falso
+              .item
+                = link_to image_tag('img-trabajo-3.jpg'), '#'
+                %p Texto falso
+              .item
+                = link_to image_tag('img-trabajo-1.jpg'), '#'
+                %p
+                  = link_to content_tag(:span, 'Texto falso'), '/'
+              .item
+                = link_to image_tag('img-trabajo-2.jpg'), '#'
+                %p Texto falso
+              .item
+                = link_to image_tag('img-trabajo-1.jpg'), '#'
+                %p Texto falso
+              .item
+                = link_to image_tag('img-trabajo-4.jpg'), '#'
+                %p Texto falso
+              .item
+                = link_to image_tag('img-trabajo-3.jpg'), '#'
+                %p Texto falso
+
+
+      #content-bottom
+        .que-podemos-hacer
+          %p.text-title
             ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
+        .container-fluid.sides-4
+          .row-fluid
+            .span4
+              %h2.title
+                CMS HECHO SIMPLE
+              %p
+                ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+  
+              %p
+                En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
+  
+              %p
+                Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+  
+            .span6.offset2
+              #myCarousel.carousel.slide
+                %ol.carousel-indicators
+                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
+                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
+                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
+
+                <!-- Carousel items -->
+                .carousel-inner
+                  .item.active
+                    = image_tag 'img-slider.png'
+                  .item
+                    = image_tag 'img-slider.png'
+                  .item
+                    = image_tag 'img-slider.png'
+
+                <!-- Carousel nav -->
+                = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
+                = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right' 
 
 
-      .container-fluid
+
+
+      #complement-top.container-fluid
+        .row-fluid
+          .span12
+            FACEBOOK
+
+      #complement-middle.container-fluid.form-region
 
         .row-fluid
-          .span3
-            .well.sidebar-nav
-              %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Link 1", "/path1"
-                %li= link_to "Link 2", "/path2"
-                %li= link_to "Link 3", "/path3"
-          .span9
-            = bootstrap_flash
+          .span12
+            %h2.title
+              ¿Tienes alguna duda? Pregúntanos
+
+        .row-fluid
+          %form
+            .span4.offset2
+              .field
+                %label.span3
+                  Nombre
+                %input{:type => 'text', :class => 'span8'}
+              .field
+                %label.span3
+                  Email 
+                %input{:type => 'text', :class => 'span8'}
+
+            .span4
+              .field
+                %label.span3
+                  Mensaje
+                %textarea{:class => 'span8'}
+
+
+
               
       %footer
         %p &copy; Company 2013

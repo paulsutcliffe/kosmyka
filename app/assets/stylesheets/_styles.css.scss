@@ -1,6 +1,6 @@
-body {color: $gray}
+body {color: $gray; font-family: Dosis}
 
-p {color: $gray; font-family: Dosis}
+p {color: $gray; font-family: Dosis; text-align: justify}
 a {color: $gray; font-family: Dosis}
 
 
@@ -13,11 +13,80 @@ a {color: $gray; font-family: Dosis}
 .navbar-fluid-top .nav {position: relative; top: 5px}
 
 #content-top {padding: 0}
-
+#content-middle.masonry-div {padding-right: 0}
 
 .presentacion {@extend .big-text; @extend .centered; padding: 20px 0}
-.conoce {@extend .middle-text; @extend .centered; @extend .bold;
+.conoce {@extend .middle-text; @extend .centered; @extend .bold; margin-bottom: 40px;
   &:before, &:after {content: url(flecha-abajo.png); position: relative}
   &:before {left: -20px}
   &:after {right: -20px}
 }
+
+.container-fluid.sides-4 {padding-top: 40px}
+
+#masonry-container {
+
+  .item {
+    margin-bottom: 20px; 
+    img {@extend .border; vertical-align: top}
+    position: relative;
+    p {@include absolute(bottom, left, 5px, 5px); margin: 0; 
+      -moz-transition: 0.3s ease-out all;
+      background: $caption; @include size(100%, 80px);
+      a {
+        display: block; @include size(100%, 100%);
+        position: relative;
+        span {
+          @include absolute(bottom, left, 3px, 0); color: white;
+          padding-left: 30px;
+          background: $caption-icon;
+          font-size: 18px; text-transform: uppercase;
+        }
+      }
+    }
+    &:hover {
+      p {}
+    }
+  }
+}
+
+
+.que-podemos-hacer {
+  padding-left: 0; padding-right: 0;
+  .text-title {
+    background: $yellow;
+    @extend .big-text; color: white; @extend .centered; padding: 40px 0; margin: 0;
+    position: relative;
+    &:after {content:""; 
+      border-color: $yellow transparent transparent transparent;
+      border-style: solid;
+      border-width: 20px;
+      display: block; @include size(0, 0);
+      @include absolute(left, top, 47%, 100%);
+    }
+  } 
+}
+
+
+.carousel-control {
+  font-family: Dosis;
+  color: $gray; opacity: 1; border: 0; font-size: 40px; margin: 0;
+  border-radius: 0; top: 100%;
+  background: $yellow;
+  &:hover {
+    background: $cyan;
+  }
+  &.left {
+    left: auto; right: 55px;
+  }
+}
+
+.form-region {
+  .field {
+    margin-bottom: 10px;
+    label {margin: 0; position: relative; top: 5px; padding-right: 15px;
+     font-family: Dosis; font-size: 18px; text-align: right}
+    input[type="text"], textarea { @extend .form-element; padding-top: 5px; padding-bottom: 5px}
+  }
+}
+
