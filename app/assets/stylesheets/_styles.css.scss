@@ -1,0 +1,23 @@
+body {color: $gray}
+
+p {color: $gray; font-family: Dosis}
+a {color: $gray; font-family: Dosis}
+
+
+.barra {vertical-align: top; width: 100%; @include absolute(top, left, 0, 0)}
+.navbar .nav > li > a {
+  @extend .menu-principal;
+}
+
+.navbar-inner {padding-top: 15px; padding-bottom: 10px; border: 0; border-radius: 0}
+.navbar-fluid-top .nav {position: relative; top: 5px}
+
+#content-top {padding: 0}
+
+
+.presentacion {@extend .big-text; @extend .centered; padding: 20px 0}
+.conoce {@extend .middle-text; @extend .centered; @extend .bold;
+  &:before, &:after {content: url(flecha-abajo.png); position: relative}
+  &:before {left: -20px}
+  &:after {right: -20px}
+}
