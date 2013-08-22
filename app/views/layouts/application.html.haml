@@ -140,7 +140,7 @@
           .span12
             = render 'shared/likebox'
 
-      #complement-middle.container-fluid.form-region
+      #complement-middle.container-fluid.region.form-region
 
         .row-fluid
           .span12
@@ -153,21 +153,23 @@
               .field
                 %label.span3
                   Nombre
-                %input{:type => 'text', :class => 'span8'}
+                %input{:type => 'text', :class => 'span9'}
               .field
                 %label.span3
                   Email 
-                %input{:type => 'text', :class => 'span8'}
+                %input{:type => 'text', :class => 'span9'}
               .field
                 %label.span3
                   Teléfono 
-                %input{:type => 'text', :class => 'span8'}
+                %input{:type => 'text', :class => 'span9'}
 
             .span4
               .field
                 %label.span3
                   Mensaje
-                %textarea{:class => 'span8'}
+                %textarea{:class => 'span9'}
+              .actions
+                %input{:type => "submit"}
 
 
 

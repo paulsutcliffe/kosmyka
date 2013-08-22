@@ -110,6 +110,9 @@ h2.title {@extend .title-default}
     input[type="text"], textarea { @extend .form-element; padding-top: 5px; padding-bottom: 5px}
     textarea {@extend .textarea-tag}
   }
+  .actions {
+    input[type="submit"] {border: 0; background: $yellow; padding: 10px 20px; text-transform: uppercase; float: right; margin-right: 10px}
+  }
 }
 
 .likebox-wrapper {
@@ -136,6 +139,6 @@ h2.title {@extend .title-default}
 footer {
   .redes-sociales-share {}
   .redes-sociales-contador {}
-  .mail-us {text-align: right}
+  .mail-us {text-align: right; a {font-size: 20px}}
 
 }
