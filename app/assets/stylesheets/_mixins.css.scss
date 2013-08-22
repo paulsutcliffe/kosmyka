@@ -13,6 +13,17 @@
   font-family: Dosis; margin-bottom: 0; 
   &:focus {background-color: $yellow}
 }
+.textarea-tag {
+  height: 110px; min-height: 110px; resize: vertical;
+}
+
+
+.title-default {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 40px;
+}
 
 
 
@@ -27,12 +38,37 @@
 
 
 
-/* CORE */
-
-// core
+// en evaluación
 @mixin text-shadow {
   text-shadow: 1px 1px 0px #d6dddf;
 }
+
+@mixin display-false {
+  visibility: hidden; opacity: 0;
+}
+@mixin display-true {
+  visibility: visible; opacity: 1;
+}
+
+@mixin inline-block-left($separation) {
+  text-align: right;
+  li {margin-right: $separation}
+  li, a {@include inline-block}
+}
+
+@mixin inline-block-right($separation) {
+  text-align: right;
+  li {margin-left: $separation}
+  li, a {@include inline-block}
+}
+
+// core
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6 IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 
 @mixin full-width {
   width: 100%; float: left; clear: left;

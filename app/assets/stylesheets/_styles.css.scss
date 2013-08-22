@@ -3,10 +3,22 @@ body {color: $gray; font-family: Dosis}
 p {color: $gray; font-family: Dosis; text-align: justify}
 a {color: $gray; font-family: Dosis}
 
+h2.title {@extend .title-default}
 
 .barra {vertical-align: top; width: 100%; @include absolute(top, left, 0, 0)}
+.navbar {margin-bottom: 0}
 .navbar .nav > li > a {
-  @extend .menu-principal;
+  @extend .menu-principal; position: relative;
+  &:hover {
+    color: $cyan;
+  }
+  &:after {
+    border-color: transparent transparent $cyan transparent;
+    border-width: 10px;
+    border-style: solid;
+    @include absolute(left, bottom, 45%, -14px); display: none; content: "";
+  }
+  &:hover:after {display: block}
 }
 
 .navbar-inner {padding-top: 15px; padding-bottom: 10px; border: 0; border-radius: 0}
@@ -22,7 +34,8 @@ a {color: $gray; font-family: Dosis}
   &:after {right: -20px}
 }
 
-.container-fluid.sides-4 {padding-top: 40px}
+.region {padding-top: 40px; padding-bottom: 80px; background: $bevel}
+.region.simple {background: none}
 
 #masonry-container {
 
@@ -81,12 +94,46 @@ a {color: $gray; font-family: Dosis}
   }
 }
 
+.carousel {
+  margin-bottom: 0;
+}
+
 .form-region {
+  h2.title {text-align: center}
+
   .field {
     margin-bottom: 10px;
     label {margin: 0; position: relative; top: 5px; padding-right: 15px;
      font-family: Dosis; font-size: 18px; text-align: right}
     input[type="text"], textarea { @extend .form-element; padding-top: 5px; padding-bottom: 5px}
+    textarea {@extend .textarea-tag}
   }
 }
 
+.likebox-wrapper {
+  text-align: center;
+  .likebox {@extend .border; border-width: 10px; @include inline-block; margin: 0 auto; width: 80%; position: relative;
+    &:after {content: $triangle; @include absolute(left, bottom, -10px, -15px); display: block}
+    iframe {
+      width: 100% !important; vertical-align: top;
+    }
+  }
+}
+
+.redes-sociales {
+  &.share {
+    a {@include size(45px, 45px); @include inline-block; text-align: center; 
+      &.facebook {background: $purple}
+      &.twitter {background: $gold}
+      &.rss {background: $cyan}
+      img {width: auto; margin-top: 11px;}
+    }
+  }
+}
+
+footer {
+  .redes-sociales-share {}
+  .redes-sociales-contador {}
+  .mail-us {text-align: right}
+
+}

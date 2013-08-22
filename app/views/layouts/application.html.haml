@@ -90,7 +90,7 @@
         .que-podemos-hacer
           %p.text-title
             ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
-        .container-fluid.sides-4
+        .container-fluid.region.simple
           .row-fluid
             .span4
               %h2.title
@@ -127,10 +127,10 @@
 
 
 
-      #complement-top.container-fluid
+      #complement-top.container-fluid.region
         .row-fluid
           .span12
-            FACEBOOK
+            = render 'shared/likebox'
 
       #complement-middle.container-fluid.form-region
 
@@ -150,6 +150,10 @@
                 %label.span3
                   Email 
                 %input{:type => 'text', :class => 'span8'}
+              .field
+                %label.span3
+                  Teléfono 
+                %input{:type => 'text', :class => 'span8'}
 
             .span4
               .field
@@ -160,8 +164,17 @@
 
 
               
-      %footer
-        %p &copy; Company 2013
+      %footer.container-fluid.region
+        .row-fluid
+          %h2.element-invisible Footer
+
+        .row-fluid
+          .span2.redes-sociales-share
+            = render 'shared/share'
+          .span4.redes-sociales-contador
+            = render 'shared/redes_sociales_contador'
+          .span4.offset2.mail-us
+            = link_to 'info@kosmyka.com', 'info@kosmyka', target: '_blank'
     /
       Javascripts
       \==================================================
