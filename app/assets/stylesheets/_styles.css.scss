@@ -41,24 +41,26 @@ h2.title {@extend .title-default}
 
   .item {
     margin-bottom: 20px; 
-    img {@extend .border; vertical-align: top}
-    position: relative;
-    p {@include absolute(bottom, left, 5px, 5px); margin: 0; 
-      -moz-transition: 0.3s ease-out all;
-      background: $caption; @include size(100%, 80px);
-      a {
-        display: block; @include size(100%, 100%);
-        position: relative;
-        span {
-          @include absolute(bottom, left, 3px, 0); color: white;
-          padding-left: 30px;
-          background: $caption-icon;
-          font-size: 18px; text-transform: uppercase;
+    .item-inner {overflow: hidden; @extend .border; 
+      img {vertical-align: top}
+      position: relative;
+      p {@include absolute(bottom, left, -100%, 0px); margin: 0; 
+        -moz-transition: 0.3s ease-out all;
+        background: $caption; @include size(100%, 80px);
+        a {
+          display: block; @include size(100%, 100%);
+          position: relative;
+          span {
+            @include absolute(bottom, left, 3px, 0); color: white;
+            padding-left: 30px;
+            background: $caption-icon;
+            font-size: 18px; text-transform: uppercase;
+          }
         }
       }
-    }
-    &:hover {
-      p {}
+      &:hover {
+        p {bottom: 0px}
+      }
     }
   }
 }
