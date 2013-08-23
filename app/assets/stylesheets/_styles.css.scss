@@ -11,7 +11,7 @@ h1.page-title {@extend .title-main;
 h2.title {@extend .title-default;
   .not-front & {padding: 0px 0 20px}
 }
-h2.title.region-title {text-align: center}
+h2.title.region-title {text-align: center; margin-top: 20px}
 
 .barra {vertical-align: top; width: 100%; @include absolute(top, left, 0, 0)}
 .navbar {margin-bottom: 0}
