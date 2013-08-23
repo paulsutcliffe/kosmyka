@@ -1,0 +1,20 @@
+.container.nav-collapse
+  %ul.nav
+    %li
+      = link_to_unless_current I18n.t("projects.title"), projects_path do
+        %span 
+          = I18n.t("projects.title")
+    %li
+      = link_to_unless_current I18n.t("services.title"), services_index_path do
+        %span 
+          = I18n.t("services.title")
+    %li
+      = link_to_unless_current I18n.t("company.title"), company_index_path do
+        %span 
+          = I18n.t("company.title")
+    %li
+      = link_to_unless_current I18n.t("contact.title"), new_contact_path do
+        %span 
+          = I18n.t("contact.title")
+
+

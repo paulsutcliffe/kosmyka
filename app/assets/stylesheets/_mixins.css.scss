@@ -1,4 +1,19 @@
 .menu-principal {font-family: Dosis; font-weight: 400; font-size: 18px; text-transform: uppercase}
+.menu-default-bootstrap {
+  color: #777777;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #FFFFFF;
+  display: block;
+}
+.menu-triangle {
+    border-color: transparent transparent $cyan transparent;
+    border-width: 10px;
+    border-style: solid;
+    position: absolute; left:45%; bottom: -14px; display: none; content: "";
+}
+
 
 .big-text {font-size: 40px; line-height: 100%}
 .middle-text {font-size: 25px; line-height: 100%}
@@ -17,7 +32,14 @@
   height: 110px; min-height: 110px; resize: vertical;
 }
 
+.paragraph-default {
+  color: $gray; font-family: Dosis; text-align: justify; font-size: 18px; font-weight: 300; line-height: 125%;
+}
 
+.title-main {
+  font-size: 30px; color: white; background: $gray; text-align: center; padding: 40px 0; font-weight: 300;
+  text-transform: uppercase; margin: 0; position: relative; height: 40px;
+}
 .title-default {
   text-transform: uppercase;
   font-size: 24px;
@@ -25,6 +47,12 @@
   padding-bottom: 40px;
 }
 
+.title-triangle {
+    border-color: transparent transparent $gray transparent; width: 0; margin: 0 auto;
+    border-width: 25px;
+    border-style: solid;
+    position: relative; top: -130px; display: block; content: "";
+}
 
 
 

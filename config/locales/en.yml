@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+
+  projects:
+    title: Portafolio
+  services:
+    title: Servicios
+    index: La Empresa
+  company:
+    title: La Empresa
+  contact:
+    title: Contacto

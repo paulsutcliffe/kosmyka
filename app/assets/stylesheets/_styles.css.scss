@@ -1,24 +1,35 @@
 body {color: $gray; font-family: Dosis}
 
-p {color: $gray; font-family: Dosis; text-align: justify}
+p {@extend .paragraph-default}
 a {color: $gray; font-family: Dosis}
 
-h2.title {@extend .title-default}
+h1.page-title {@extend .title-main;
+  &:after {
+    @extend .title-triangle;
+  }
+}
+h2.title {@extend .title-default;
+  .not-front & {padding: 0px 0 20px}
+}
+h2.title.region-title {text-align: center}
 
 .barra {vertical-align: top; width: 100%; @include absolute(top, left, 0, 0)}
 .navbar {margin-bottom: 0}
-.navbar .nav > li > a {
-  @extend .menu-principal; position: relative;
+.navbar .nav > li > a,
+.navbar .nav > li > span {
+  @extend .menu-principal; @extend .menu-default-bootstrap; position: relative;
   &:hover {
     color: $cyan;
   }
   &:after {
-    border-color: transparent transparent $cyan transparent;
-    border-width: 10px;
-    border-style: solid;
-    @include absolute(left, bottom, 45%, -14px); display: none; content: "";
+    @extend .menu-triangle;
   }
   &:hover:after {display: block}
+}
+.navbar .nav > li > span {color: $cyan;
+  &:after {
+    @extend .menu-triangle; display: block;
+  }
 }
 
 .navbar-inner {padding-top: 15px; padding-bottom: 10px; border: 0; border-radius: 0}
@@ -141,4 +152,12 @@ footer {
   .redes-sociales-contador {}
   .mail-us {text-align: right; a {font-size: 20px}}
 
+}
+
+.not-full {
+  width: auto
+}
+
+.main-section-page {
+  padding-bottom: 40px
 }

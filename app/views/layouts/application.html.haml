@@ -19,7 +19,7 @@
     = javascript_include_tag 'masonry.pkgd.min.js'
 
 
-  %body
+  %body{id: bodyid, class: bodyclass}
     %header
       = image_tag 'barra.jpg', class: 'barra'
       .navbar.navbar-fluid-top
@@ -30,163 +30,23 @@
               %span.icon-bar
               %span.icon-bar
             = link_to image_tag('logo.png'), '/', class: 'brand'
-            .container.nav-collapse
-              %ul.nav
-                %li= link_to "Portafolio", "/path1"
-                %li= link_to "Servicios", "/path2"
-                %li= link_to "La Empresa", "/path3"
-                %li= link_to "Contacto", "/path2"
+            = render 'layouts/menu'
 
-    #content
-      #content-top.container-fluid
-        .row-fluid
-          .span12
-            = image_tag 'img-home.jpg'
+    = yield
 
-        .row-fluid
-          .span12
-            %p.presentacion
-              DISEÑAMOS Y PROGRAMAMOS PÁGINAS
-              %br
-              Y APLICACIONES WEB DINÁMICAS
-      
-      #content-middle.container-fluid.masonry-div
-        .row-fluid
-          .span12
-            %p.conoce
-              CONOCE LOS ÚLTIMOS TRABAJOS QUE HEMOS HECHO
-        .row-fluid
-          .span12
-            #masonry-container
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-1.jpg'), '#'
-                  %p
-                    = link_to content_tag(:span, 'Texto falso'), '/'
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-2.jpg'), '#'
-                  %p Texto falso
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-3.jpg'), '#'
-                  %p Texto falso
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-1.jpg'), '#'
-                  %p
-                    = link_to content_tag(:span, 'Texto falso'), '/'
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-2.jpg'), '#'
-                  %p Texto falso
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-1.jpg'), '#'
-                  %p Texto falso
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-4.jpg'), '#'
-                  %p Texto falso
-              .item
-                .item-inner
-                  = link_to image_tag('img-trabajo-3.jpg'), '#'
-                  %p Texto falso
-
-
-      #content-bottom
-        .que-podemos-hacer
-          %p.text-title
-            ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
-        .container-fluid.region.simple
-          .row-fluid
-            .span4
-              %h2.title
-                CMS HECHO SIMPLE
-              %p
-                ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+    %footer.container-fluid.region
+      .row-fluid
+        %h2.element-invisible Footer
   
-              %p
-                En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
-  
-              %p
-                Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
-  
-            .span6.offset2
-              #myCarousel.carousel.slide
-                %ol.carousel-indicators
-                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
-                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
-                  %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
-
-                <!-- Carousel items -->
-                .carousel-inner
-                  .item.active
-                    = image_tag 'img-slider.png'
-                  .item
-                    = image_tag 'img-slider.png'
-                  .item
-                    = image_tag 'img-slider.png'
-
-                <!-- Carousel nav -->
-                = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
-                = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right' 
-
-
-
-
-      #complement-top.container-fluid.region
-        .row-fluid
-          .span12
-            = render 'shared/likebox'
-
-      #complement-middle.container-fluid.region.form-region
-
-        .row-fluid
-          .span12
-            %h2.title
-              ¿Tienes alguna duda? Pregúntanos
-
-        .row-fluid
-          %form
-            .span4.offset2
-              .field
-                %label.span3
-                  Nombre
-                %input{:type => 'text', :class => 'span9'}
-              .field
-                %label.span3
-                  Email 
-                %input{:type => 'text', :class => 'span9'}
-              .field
-                %label.span3
-                  Teléfono 
-                %input{:type => 'text', :class => 'span9'}
-
-            .span4
-              .field
-                %label.span3
-                  Mensaje
-                %textarea{:class => 'span9'}
-              .actions
-                %input{:type => "submit"}
-
-
-
-              
-      %footer.container-fluid.region
-        .row-fluid
-          %h2.element-invisible Footer
-
-        .row-fluid
-          .span2.redes-sociales-share
-            = render 'shared/share'
-          .span4.redes-sociales-contador
-            = render 'shared/redes_sociales_contador'
-          .span4.offset2.mail-us
-            = link_to 'info@kosmyka.com', 'info@kosmyka', target: '_blank'
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"
+      .row-fluid
+        .span2.redes-sociales-share
+          = render 'shared/share'
+        .span4.redes-sociales-contador
+          = render 'shared/redes_sociales_contador'
+        .span4.offset2.mail-us
+          = link_to 'info@kosmyka.com', 'info@kosmyka', target: '_blank'
+  /
+    Javascripts
+    \==================================================
+  / Placed at the end of the document so the pages load faster
+  = javascript_include_tag "application"
