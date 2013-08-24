@@ -1,4 +1,27 @@
 - model_class = Contact
-.page-header
-  %h1=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human
+= encabezado('img-contacto.jpg', I18n.t('contact.title'), I18n.t('contact.heading'), 'span10 offset1')
+
+.row.contact-info
+  .span10
+  .span5
+    = image_tag 'icon-info.png', class: 'not-full'
+    INFO@KOSMYKA.COM
+  .span5.offset1
+    = image_tag 'icon-face.png', class: 'not-full'
+    = '/KOSMYKAweb'
+  .span5
+    = image_tag 'icon-mobile.png', class: 'not-full'
+    951754033
+  .span5.offset1
+    = image_tag 'icon-twitter.png', class: 'not-full'
+    @KOSMYKA
+
 = render :partial => "form"
+
+
+
+= closing_tags
+
+-#
+  .page-header
+    %h1=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human
