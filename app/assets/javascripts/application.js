@@ -13,5 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require masonry.pkgd.min.js
-//= require scripts.js
