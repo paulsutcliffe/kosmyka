@@ -30,7 +30,9 @@ def encabezado_4(bootstrap_span)
 end
 
 def encabezado_5(title2)
-  "#{'<h2 class="title region-title">' + title2 + '</h2>'}".html_safe
+  if title2 != 'false'
+    "#{'<h2 class="title region-title">' + title2 + '</h2>'}".html_safe
+  end
 end
 
 def closing_tags

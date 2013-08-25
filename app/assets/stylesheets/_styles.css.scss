@@ -1,7 +1,15 @@
 body {color: $gray; font-family: Dosis}
 
-p {@extend .paragraph-default}
+p, blockquote {@extend .paragraph-default}
+
 a {color: $gray; font-family: Dosis}
+
+blockquote {text-align: center;
+  padding-left: 0; margin-left: 0; font-style: italic;
+  .autor {text-align: right}
+  &:after,
+  &:before {display: none;} 
+}
 
 h1.page-title {@extend .title-main;
   &:after {
@@ -171,5 +179,40 @@ footer {
     font-weight: 600; white-space: nowrap;
     img {top: -5px; position: relative}
   }
+
+}
+
+/*
+.img-toggle {
+    .img-on {display: none}
+    .img-off {@include inline-block}
+  &:hover {
+    .img-on {@include inline-block}
+    .img-off {display: none}
+  }
+}*/
+
+.servicio-item {
+  p, blockquote, h2.title {
+    color: $aqua;
+  }
+  .img-on {display: none}
+  .img-off {@include inline-block}
+  &:hover {
+    p, blockquote, h2.title {
+      color: $gray;
+    }
+    .img-on {@include inline-block}
+    .img-off {display: none}
+  }
+}
+
+// color page
+h1.page-title {
+  #services & {background: $purple;
+    &:after {border-color: transparent transparent $purple transparent}
+
+  }
+
 
 }
