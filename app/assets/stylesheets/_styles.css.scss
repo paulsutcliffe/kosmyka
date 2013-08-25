@@ -35,7 +35,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 .navbar-inner {padding-top: 15px; padding-bottom: 10px; border: 0; border-radius: 0}
 .navbar-fluid-top .nav {position: relative; top: 5px}
 
-#content-top {padding: 0}
+#content-top {padding-left: 0; padding-right: 0}
 #content-middle.masonry-div {padding-right: 0}
 
 .presentacion {@extend .big-text; @extend .centered; padding: 20px 0}
@@ -45,8 +45,10 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   &:after {right: -20px}
 }
 
-.region {padding-top: 40px; padding-bottom: 80px; background: $bevel}
+.region {padding-top: 40px; padding-bottom: 60px; background: $bevel}
 .region.simple {background: none}
+
+.front #content-bottom .region {padding-bottom: 60px}
 
 #masonry-container {
 
@@ -158,13 +160,16 @@ footer {
   width: auto
 }
 
-.main-section-page {
+.front .main-section-page {
   padding-bottom: 40px
 }
 
 .contact-info {
   .span5 {
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;  
+    font-weight: 600; white-space: nowrap;
+    img {top: -5px; position: relative}
   }
+
 }

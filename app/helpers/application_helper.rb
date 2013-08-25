@@ -6,11 +6,11 @@ module ApplicationHelper
 
 
 def encabezado_1
-  '<div id="content">
+  '
     <div id="content-top" class="container-fluid">
       <div class="row-fluid">
         <div class="span12">'.html_safe 
-  # 4 divs
+  # 3 divs
 end
 
 def encabezado_2(image1)
@@ -34,7 +34,7 @@ def encabezado_5(title2)
 end
 
 def closing_tags
-  "</div></div></div></div></div></div></div>".html_safe
+  "</div></div></div></div></div></div>".html_safe
 end
 
 

@@ -16,11 +16,21 @@
     = image_tag 'icon-twitter.png', class: 'not-full'
     @KOSMYKA
 
-= render :partial => "form"
-
-
-
 = closing_tags
+
+#content-bottom.container-fluid
+  .region.form-region
+    .row-fluid
+      .span12
+        %h2.title
+          = I18n.t('contact.legend')
+      .row-fluid
+        = render :partial => "form"
+
+
+
+
+
 
 -#
   .page-header
