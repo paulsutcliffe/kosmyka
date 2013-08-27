@@ -5,6 +5,10 @@ $(window).load(function(){
     $container.isotope({
     //  sortBy : 'random',
       layoutMode: 'masonry',
+      masonry: {
+    columnWidth: 110,
+    gutterWidth: 10
+  }
     //  transformsEnabled: false,
     });
   });
@@ -15,6 +19,11 @@ $(window).load(function(){
     return false;
   });
 
+
+
+$(window).on('resize', function(){
+    $container.isotope('reLayout')
+});
 
 
 

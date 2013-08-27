@@ -2,36 +2,11 @@
 // encabezado(img root, page main title, page secondary title, bootstrap class)
 = encabezado('img-projects-page.jpg', I18n.t('projects.title'), 'false', 'span10 offset1')
 
-.span12
-  %ul
-    %li
-      = link_to 'Web', ''
-    %li
-      = link_to 'Web', ''
-    %li
-      = link_to 'Web', ''
 
 .row-fluid
-  .span4
-    = image_tag 'img-port.jpg'
-    %h2
-      test
-    %p
-      parrafo
+
+  = render 'list'
   
-  .span4
-    = image_tag 'img-port.jpg'
-    %h2
-      test
-    %p
-      parrafo
-  
-  .span4
-    = image_tag 'img-port.jpg'
-    %h2
-      test
-    %p
-      parrafo
 
 
 -#

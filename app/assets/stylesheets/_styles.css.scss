@@ -216,3 +216,24 @@ h1.page-title {
 
 
 }
+
+
+#portafolio-botones {
+  margin-bottom: 20px;
+  ul {
+    text-align: center;
+    li {@include inline-block;
+      a {font-size: 24px; font-weight: 700; text-transform: uppercase; margin-right: 60px;
+        &:before {content: ""; @include inline-block; background: $cyan; width: 20px; height: 20px; margin-right: 20px}
+        &.iso-web:before {background: $cyan}
+        &.iso-imp:before {background: $gray}   
+        &.iso-tod:before {background: $yellow}
+      }
+    }
+  }
+}
+.isotope .isotope-item {width: 31%; list-style: none;
+  h3 {margin: 0}
+  p {margin: 0; font-size: 11px}
+
+}
