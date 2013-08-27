@@ -8,7 +8,7 @@ blockquote {text-align: center;
   padding-left: 0; margin-left: 0; font-style: italic;
   .autor {text-align: right}
   &:after,
-  &:before {display: none;} 
+  &:before {display: none;}
 }
 
 h1.page-title {@extend .title-main;
@@ -44,6 +44,22 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 .navbar-fluid-top .nav {position: relative; top: 5px}
 
 #content-top {padding-left: 0; padding-right: 0}
+
+#parallaxContainer {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  //top: 0;
+  min-height: 200px;
+}
+
+#parallaxContainer img {
+    width: 100%;
+    height: auto;
+}
+
+#content-middle { background: #fff; margin-top: 400px;}
+
 #content-middle.masonry-div {padding-right: 0}
 
 .presentacion {@extend .big-text; @extend .centered; padding: 20px 0}
@@ -61,11 +77,11 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 #masonry-container {
 
   .item {
-    margin-bottom: 20px; 
-    .item-inner {overflow: hidden; @extend .border; 
+    margin-bottom: 20px;
+    .item-inner {overflow: hidden; @extend .border;
       img {vertical-align: top}
       position: relative;
-      p {@include absolute(bottom, left, -100%, 0px); margin: 0; 
+      p {@include absolute(bottom, left, -100%, 0px); margin: 0;
         -moz-transition: 0.3s ease-out all;
         background: $caption; @include size(100%, 80px);
         a {
@@ -93,14 +109,14 @@ h2.title.region-title {text-align: center; margin-top: 20px}
     background: $yellow;
     @extend .big-text; color: white; @extend .centered; padding: 40px 0; margin: 0;
     position: relative;
-    &:after {content:""; 
+    &:after {content:"";
       border-color: $yellow transparent transparent transparent;
       border-style: solid;
       border-width: 20px;
       display: block; @include size(0, 0);
       @include absolute(left, top, 47%, 100%);
     }
-  } 
+  }
 }
 
 
@@ -148,7 +164,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 
 .redes-sociales {
   &.share {
-    a {@include size(45px, 45px); @include inline-block; text-align: center; 
+    a {@include size(45px, 45px); @include inline-block; text-align: center;
       &.facebook {background: $purple}
       &.twitter {background: $gold}
       &.rss {background: $cyan}
@@ -175,7 +191,7 @@ footer {
 .contact-info {
   .span5 {
     margin-bottom: 40px;
-    font-size: 24px;  
+    font-size: 24px;
     font-weight: 600; white-space: nowrap;
     img {top: -5px; position: relative}
   }
@@ -226,7 +242,7 @@ h1.page-title {
       a {font-size: 24px; font-weight: 700; text-transform: uppercase; margin-right: 60px;
         &:before {content: ""; @include inline-block; background: $cyan; width: 20px; height: 20px; margin-right: 20px}
         &.iso-web:before {background: $cyan}
-        &.iso-imp:before {background: $gray}   
+        &.iso-imp:before {background: $gray}
         &.iso-tod:before {background: $yellow}
       }
     }

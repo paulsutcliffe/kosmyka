@@ -4,7 +4,7 @@
 #content
   #content-top.container-fluid
     .row-fluid
-      .span12
+      #parallaxContainer.span12
         = image_tag 'img-home.jpg'
 
     .row-fluid
@@ -13,7 +13,7 @@
           DISEÑAMOS Y PROGRAMAMOS PÁGINAS
           %br
           Y APLICACIONES WEB DINÁMICAS
-  
+
   #content-middle.container-fluid.masonry-div.region
     .row-fluid
       .span12
@@ -94,7 +94,7 @@
 
             <!-- Carousel nav -->
             = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
-            = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right' 
+            = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
 
 
 
@@ -119,11 +119,11 @@
             %input{:type => 'text', :class => 'span9'}
           .field
             %label.span3
-              Email 
+              Email
             %input{:type => 'text', :class => 'span9'}
           .field
             %label.span3
-              Teléfono 
+              Teléfono
             %input{:type => 'text', :class => 'span9'}
 
         .span4
@@ -136,5 +136,5 @@
 
 
 
-          
+
 
