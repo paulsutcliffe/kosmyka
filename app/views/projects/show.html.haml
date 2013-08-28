@@ -31,7 +31,7 @@
     = paragraph(@project.description)
 
     %p.proyect-links
-      .link-label 
+      %span.link-label 
         Visita la web 
       = link_to @project.url, @project.url, target: '_blank', class: 'btn external'
 

@@ -264,7 +264,7 @@ h1.page-title {
 
     }
     .proyect-links {margin-top: 50px; overflow: hidden; text-align: right; 
-      .link-label {margin-top: 3px; @include inline-block}
+      .link-label {margin-top: 3px; @include inline-block; @extend .paragraph-default; margin-right: 5px}
     }
   }
 }
