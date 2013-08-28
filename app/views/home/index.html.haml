@@ -1,110 +1,110 @@
 - content_for :javascript do
   = javascript_include_tag 'masonry.pkgd.min.js', 'masonry-init.js'
 
-#content
-  #content-top.container-fluid
-    .row-fluid
-      #parallaxContainer.span12
-        = image_tag 'img-home.jpg'
+#content-top.container-fluid
+  .row-fluid
+    #parallaxContainer.span12
+      = image_tag 'img-home.jpg'
 
-    .row-fluid
-      .span12
-        %p.presentacion
-          DISEÑAMOS Y PROGRAMAMOS PÁGINAS
-          %br
-          Y APLICACIONES WEB DINÁMICAS
-
-  #content-middle.container-fluid.masonry-div.region
-    .row-fluid
-      .span12
-        %p.conoce
-          CONOCE LOS ÚLTIMOS TRABAJOS QUE HEMOS HECHO
-    .row-fluid
-      .span12
-        #masonry-container
-          - @projects.each do |project|
-            .item
-              .item-inner
-                = link_to (image_tag project.image_url(:thumb)), project
-                %p
-                  = link_to content_tag(:span, project.name), project
-
-
-  #content-bottom
-    .que-podemos-hacer
-      %p.text-title
-        ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
-    .container-fluid.region.simple
+    
+    #content-middle.container-fluid.masonry-div.region
       .row-fluid
-        .span4
-          %h2.title
-            CMS HECHO SIMPLE
-          %p
-            ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+        .span12
+          %p.presentacion
+            DISEÑAMOS Y PROGRAMAMOS PÁGINAS
+            %br
+            Y APLICACIONES WEB DINÁMICAS
 
-          %p
-            En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
-
-          %p
-            Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
-
-        .span6.offset2
-          #myCarousel.carousel.slide
-            %ol.carousel-indicators
-              %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
-              %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
-              %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
-
-            <!-- Carousel items -->
-            .carousel-inner
-              .item.active
-                = image_tag 'img-slider.png'
+      .row-fluid
+        .span12
+          %p.conoce
+            CONOCE LOS ÚLTIMOS TRABAJOS QUE HEMOS HECHO
+      .row-fluid
+        .span12
+          #masonry-container
+            - @projects.each do |project|
               .item
-                = image_tag 'img-slider.png'
-              .item
-                = image_tag 'img-slider.png'
-
-            <!-- Carousel nav -->
-            = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
-            = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
+                .item-inner
+                  = link_to (image_tag project.image_url(:thumb)), project
+                  %p
+                    = link_to content_tag(:span, project.name), project
 
 
-
-
-  #complement-top.container-fluid.region
+#content-bottom
+  .que-podemos-hacer
+    %p.text-title
+      ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
+  .container-fluid.region.simple
     .row-fluid
-      .span12
-        = render 'shared/likebox'
-
-  #complement-middle.container-fluid.region.form-region
-    .row-fluid
-      .span12
+      .span4
         %h2.title
-          ¿Tienes alguna duda? Pregúntanos
+          CMS HECHO SIMPLE
+        %p
+          ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
 
-    .row-fluid
-      %form
-        .span4.offset2
-          .field
-            %label.span3
-              Nombre
-            %input{:type => 'text', :class => 'span9'}
-          .field
-            %label.span3
-              Email
-            %input{:type => 'text', :class => 'span9'}
-          .field
-            %label.span3
-              Teléfono
-            %input{:type => 'text', :class => 'span9'}
+        %p
+          En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
 
-        .span4
-          .field
-            %label.span3
-              Mensaje
-            %textarea{:class => 'span9'}
-          .actions
-            %input{:type => "submit"}
+        %p
+          Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+
+      .span6.offset2
+        #myCarousel.carousel.slide
+          %ol.carousel-indicators
+            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
+            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
+            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
+
+          <!-- Carousel items -->
+          .carousel-inner
+            .item.active
+              = image_tag 'img-slider.png'
+            .item
+              = image_tag 'img-slider.png'
+            .item
+              = image_tag 'img-slider.png'
+
+          <!-- Carousel nav -->
+          = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
+          = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
+
+
+
+
+#complement-top.container-fluid.region
+  .row-fluid
+    .span12
+      = render 'shared/likebox'
+
+#complement-middle.container-fluid.region.form-region
+  .row-fluid
+    .span12
+      %h2.title
+        ¿Tienes alguna duda? Pregúntanos
+
+  .row-fluid
+    %form
+      .span4.offset2
+        .field
+          %label.span3
+            Nombre
+          %input{:type => 'text', :class => 'span9'}
+        .field
+          %label.span3
+            Email
+          %input{:type => 'text', :class => 'span9'}
+        .field
+          %label.span3
+            Teléfono
+          %input{:type => 'text', :class => 'span9'}
+
+      .span4
+        .field
+          %label.span3
+            Mensaje
+          %textarea{:class => 'span9'}
+        .actions
+          %input{:type => "submit"}
 
 
 

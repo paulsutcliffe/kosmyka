@@ -60,7 +60,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 
 #content-middle { background: #fff; margin-top: 400px;}
 
-#content-middle.masonry-div {padding-right: 0}
+#content-middle.masonry-div {/*padding-right: 0*/}
 
 .presentacion {@extend .big-text; @extend .centered; padding: 20px 0}
 .conoce {@extend .middle-text; @extend .centered; @extend .bold; margin-bottom: 40px;
@@ -253,3 +253,41 @@ h1.page-title {
   p {margin: 0; font-size: 11px}
 
 }
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+
+@media (max-width: 767px) {
+  body {padding-left: 0; padding-right: 0}
+  #content-middle {margin-top: 200px}
+
+}
+
+@media print {
+
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 979px) {
+
+
+}
+
+
