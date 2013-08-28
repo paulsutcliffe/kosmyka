@@ -1,4 +1,10 @@
+
 - model_class = Project
+
+// encabezado(img root, page main title, page secondary title, bootstrap class)
+= encabezado(@project.image_url(:parallax), @project.name, 'false', 'span10 offset1')
+
+
 .page-header
   %h1=t '.title', :default => model_class.model_name.human
 
