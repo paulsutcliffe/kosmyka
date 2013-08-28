@@ -1,14 +1,15 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
+require 'faker'
 
 FactoryGirl.define do
   factory :project do
-    name "MyString"
-    client "MyString"
+    name { Faker::Company.name }
+    client { Faker::Name.name }
     launched "2013-08-16"
-    areas "MyString"
-    tecnologies "MyString"
-    description "MyText"
-    url "MyString"
-    type ""
+    areas { Faker::Lorem.words }
+    tecnologies { Faker::Lorem.words }
+    description { Faker::Lorem.paragraph }
+    url { Faker::Internet.url }
+    kind "Web"
+    image { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec', 'support', 'images', 'slide-medical-laboral.jpg')) }
   end
 end

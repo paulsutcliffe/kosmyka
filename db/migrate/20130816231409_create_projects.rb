@@ -8,7 +8,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :tecnologies
       t.text :description
       t.string :url
-      t.string :type
+      t.string :kind
 
       t.timestamps
     end

@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130827233428) do
     t.string   "tecnologies"
     t.text     "description"
     t.string   "url"
-    t.string   "type"
+    t.string   "kind"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "image"

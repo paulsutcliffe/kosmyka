@@ -28,9 +28,9 @@
     .controls
       = f.text_field :url, :class => 'text_field'
   .control-group
-    = f.label :type, :class => 'control-label'
+    = f.label :kind, :class => 'control-label'
     .controls
-      = f.text_field :type, :class => 'text_field'
+      = f.select(:kind, options_for_select( ['Web', 'Impresión'], 'Web' ) )
   .control-group
     = f.label :image, :class => 'control-label'
     .controls
