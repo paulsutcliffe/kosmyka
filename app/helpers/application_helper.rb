@@ -41,4 +41,14 @@ module ApplicationHelper
     encabezado_1 + encabezado_2(image1) + encabezado_3(title1) + encabezado_4(bootstrap_span) + encabezado_5(title2)
   end
 
+
+  # PARAGRAPH
+  def paragraph(text)
+    "#{sanitize(simple_format(text), :tags => %w(p i br b))}".html_safe
+  end
+
+  def paragraph_truncate(text, length)
+    "#{sanitize(simple_format(truncate(text, :length => length)), :tags => %w(p i br b))}".html_safe
+  end
+
 end

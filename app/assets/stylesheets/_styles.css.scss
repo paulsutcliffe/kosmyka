@@ -255,6 +255,30 @@ h1.page-title {
 }
 
 
+#projects {
+  &.show {
+    .dato {
+      overflow: hidden; 
+      b, p {overflow: hidden; @extend .paragraph-default}
+      b {font-weight: 700; margin-right: 10px; float: left}
+
+    }
+    .proyect-links {margin-top: 50px; overflow: hidden; text-align: right; 
+      .link-label {margin-top: 3px; @include inline-block}
+    }
+  }
+}
+
+hr {border-color: $gray}
+
+
+.btn {
+  &.external {
+    @extend .button-default;
+    background: $gray; color: white;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 
 

@@ -22,6 +22,8 @@
 .border {border: 5px solid $gray}
 .outline {outline: 5px solid $gray}
 
+.button-default {display: inline-block; *display: inline; *zoom: 1; vertical-align: top; line-height: 100%; 
+   @extend .paragraph-default; text-align: center; border: 0; padding: 6px 10px; text-shadow: none; color: white}
 
 .form-element {
   background: $form-triangle; background-color: $cyan; border-radius: 0; border: 0; font-size: 18px;
