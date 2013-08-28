@@ -36,37 +36,61 @@
       ¿QUÉ PODEMOS HACER POR TU NEGOCIO?
   .container-fluid.region.simple
     .row-fluid
-      .span4
-        %h2.title
-          CMS HECHO SIMPLE
-        %p
-          ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+      #myCarousel.carousel.slide.span10
+        %ol.carousel-indicators
+          %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
+          %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
+          %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
 
-        %p
-          En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
+        <!-- Carousel items -->
+        .carousel-inner
+          .item.active
+            .span5
+              %h2.title
+                CMS HECHO SIMPLE
+              %p
+                ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
 
-        %p
-          Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+              %p
+                En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
 
-      .span6.offset2
-        #myCarousel.carousel.slide
-          %ol.carousel-indicators
-            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "0", :class => "active"}
-            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "1"}
-            %li{:"data-target" => "#myCarousel", :"data-slide-to" => "2"}
-
-          <!-- Carousel items -->
-          .carousel-inner
-            .item.active
+              %p
+                Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+            .span5.offset2
               = image_tag 'img-slider.png'
-            .item
+          .item
+            .span5
+              %h2.title
+                CMS HECHO SIMPLE
+              %p
+                ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+
+              %p
+                En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
+
+              %p
+                Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+            .span5.offset2
               = image_tag 'img-slider.png'
-            .item
+          .item
+            .span5
+              %h2.title
+                CMS HECHO SIMPLE
+              %p
+                ¿Cómo lograr que tus clientes potenciales visiten tu web frecuentemente? Simple, dándoles contenido nuevo y fresco. Para que esta tarea sea sencilla te brindamos un panel de control muy simple que te permite administrar todos los contenidos de tu página, tan fácil de usar como el mismo facebook.
+
+              %p
+                En KOSMYKA, podemos administrar los contenidos por ti o si lo deseas, te damos todas las herramientas necesarias para que alguien de tu equipo lo haga.
+
+              %p
+                Hoy en día, el marketing esta básado principalmente en medios de comunicación modernos, como Facebook y Twitter. Brindar contenidos nuevos con la facilidad de las redes sociales e integrar estos medios con tu página web, es escencial para incrementar tu cartera de clientes.
+            .span5.offset2
               = image_tag 'img-slider.png'
 
-          <!-- Carousel nav -->
-          = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
-          = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
+
+        <!-- Carousel nav -->
+        = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
+        = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
 
 
 
@@ -83,25 +107,4 @@
         ¿Tienes alguna duda? Pregúntanos
 
   .row-fluid
-    = form_for @contact, :html => { :class => 'form-horizontal' } do |f|
-      .span4.offset2
-        .field
-          = f.label :name, class: 'span3'
-          = f.text_field :name, class: 'span9'
-        .field
-          = f.label :email, class: 'span3'
-          = f.text_field :email, class: 'span9'
-        .field
-          = f.label :phone, class: 'span3'
-          = f.text_field :phone, class: 'span9'
-      .span4
-        .field
-          = f.label :message, class: 'span3'
-          = f.text_area :message, class: 'span9'
-        .actions
-          = f.submit nil
-
-
-
-
-
+    = render 'contacts/form'

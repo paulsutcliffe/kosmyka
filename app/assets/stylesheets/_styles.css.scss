@@ -137,6 +137,11 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   margin-bottom: 0;
 }
 
+#myCarousel {
+  margin:0 auto;
+  float: none;
+}
+
 .form-region {
   h2.title {text-align: center}
 
@@ -171,6 +176,11 @@ h2.title.region-title {text-align: center; margin-top: 20px}
       img {width: auto; margin-top: 11px;}
     }
   }
+}
+
+#footer {
+  margin:0 auto;
+  float: none;
 }
 
 footer {
@@ -258,12 +268,12 @@ h1.page-title {
 #projects {
   &.show {
     .dato {
-      overflow: hidden; 
+      overflow: hidden;
       b, p {overflow: hidden; @extend .paragraph-default}
       b {font-weight: 700; margin-right: 10px; float: left}
 
     }
-    .proyect-links {margin-top: 50px; overflow: hidden; text-align: right; 
+    .proyect-links {margin-top: 50px; overflow: hidden; text-align: right;
       .link-label {margin-top: 3px; @include inline-block; @extend .paragraph-default; margin-right: 5px}
     }
   }

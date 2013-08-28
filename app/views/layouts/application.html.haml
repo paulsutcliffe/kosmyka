@@ -17,7 +17,7 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
-    
+
   %body{id: bodyid, class: bodyclass}
     %header
       = image_tag 'barra.jpg', class: 'barra'
@@ -37,18 +37,19 @@
     %footer.container-fluid.region
       .row-fluid
         %h2.element-invisible Footer
-  
+
       .row-fluid
-        .span2.redes-sociales-share
-          = render 'shared/share'
-        .span4.redes-sociales-contador
-          = render 'shared/redes_sociales_contador'
-        .span4.offset2.mail-us
-          = link_to 'info@kosmyka.com', 'info@kosmyka', target: '_blank'
+        #footer.span10
+          .span2.redes-sociales-share
+            = render 'shared/share'
+          .span4.redes-sociales-contador
+            = render 'shared/redes_sociales_contador'
+          .span4.offset2.mail-us
+            = link_to 'info@kosmyka.com', 'info@kosmyka', target: '_blank'
   /
     Javascripts
     \==================================================
   / Placed at the end of the document so the pages load faster
   = javascript_include_tag "application"
-  
+
   = yield :javascript
