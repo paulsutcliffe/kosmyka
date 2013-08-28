@@ -4,7 +4,7 @@
 
 
 #projectafolio
-  
+
   %nav#portafolio-botones
     %ul{:"data-option-key" => 'filter'}
       %li
@@ -37,38 +37,5 @@
       %h3.title
         Test
       %p Diseño Web
-
-    - @projects.each do |project|
-      %li{:class => agregar_clase_segun_tipo(project) + ' ' + agregar_tipo_como_clase(project) }
-        = image_tag project.foto(:thumb)
-        .content
-          %h3.title= project.titulo
-          %p
-            = paragraph(project, 80) 
-          - if project.tipo == 'Diseño y Web'
-            .website
-              = link_to project.url_web, project.url_web, :target => '_blank'
-            = link_to '', project.foto(:full), :class => 'lightbox fotaso',
-              :"data-target" => 'flare',
-              :"data-flare-gallery" => project.id,
-              :"data-flare-thumb" => project.foto(:thumb)
-          - else
-            = link_to '', '', :class => 'lightbox videaso',
-              :"data-target" => 'flare',
-              :"data-flare-video" => project.video
-
-          -if current_admin
-            .crud
-              = link_to 'Ver', project
-              = link_to 'Editar', edit_project_path(project)
-              = link_to 'Eliminar', project, :confirm => 'Are you sure?', :method => :delete
-
-        - if project.tipo == 'Diseño y Web'
-          - project.imagenes.each do |imagen|
-            = link_to '', imagen.fotografia(:full), :class => 'lightbox',
-              :"data-target" => 'flare',
-              :"data-flare-gallery" => project.id,
-              :"data-flare-thumb" => imagen.fotografia(:thumb)
-
 
 
