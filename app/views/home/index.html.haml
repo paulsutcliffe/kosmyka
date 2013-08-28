@@ -6,7 +6,7 @@
     #parallaxContainer.span12
       = image_tag 'img-home.jpg'
 
-    
+
     #content-middle.container-fluid.masonry-div.region
       .row-fluid
         .span12
@@ -83,28 +83,23 @@
         ¿Tienes alguna duda? Pregúntanos
 
   .row-fluid
-    %form
+    = form_for @contact, :html => { :class => 'form-horizontal' } do |f|
       .span4.offset2
         .field
-          %label.span3
-            Nombre
-          %input{:type => 'text', :class => 'span9'}
+          = f.label :name, class: 'span3'
+          = f.text_field :name, class: 'span9'
         .field
-          %label.span3
-            Email
-          %input{:type => 'text', :class => 'span9'}
+          = f.label :email, class: 'span3'
+          = f.text_field :email, class: 'span9'
         .field
-          %label.span3
-            Teléfono
-          %input{:type => 'text', :class => 'span9'}
-
+          = f.label :phone, class: 'span3'
+          = f.text_field :phone, class: 'span9'
       .span4
         .field
-          %label.span3
-            Mensaje
-          %textarea{:class => 'span9'}
+          = f.label :message, class: 'span3'
+          = f.text_area :message, class: 'span9'
         .actions
-          %input{:type => "submit"}
+          = f.submit nil
 
 
 
