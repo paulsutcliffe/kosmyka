@@ -20,7 +20,7 @@
           %p.conoce
             CONOCE LOS ÚLTIMOS TRABAJOS QUE HEMOS HECHO
       .row-fluid
-        .span11.offset1
+        #masonry-wrapper.span12
           #masonry-container
             - @projects.each do |project|
               .item
@@ -87,8 +87,8 @@
 
 
         <!-- Carousel nav -->
-        = link_to raw('&lsaquo;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
-        = link_to raw('&rsaquo;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
+        = link_to raw('&lt;'), '#myCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
+        = link_to raw('&gt;'), '#myCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
 
 
 

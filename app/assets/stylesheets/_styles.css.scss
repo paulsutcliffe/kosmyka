@@ -74,11 +74,17 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 
 .front #content-bottom .region {padding-bottom: 60px}
 
-#masonry-container {
+#masonry-wrapper {
+  margin:0 auto;
+  float: none;
+}
 
+#masonry-container {
+  margin:0 auto;
+  float: none;
   .item {
     margin-bottom: 20px;
-    .item-inner {overflow: hidden; @extend .border;
+    .item-inner {overflow: hidden;
       img {vertical-align: top}
       position: relative;
       p {@include absolute(bottom, left, -100%, 0px); margin: 0;
@@ -96,7 +102,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
         }
       }
       &:hover {
-        p {bottom: 0px}
+        p {bottom: 0px;}
       }
     }
   }
@@ -130,6 +136,12 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   }
   &.left {
     left: auto; right: 55px;
+  }
+}
+
+.carousel-indicators {
+  li { background-color: $yellow; opacity: 0.5;
+  &.active { background-color: $yellow; opacity: 1; }
   }
 }
 
