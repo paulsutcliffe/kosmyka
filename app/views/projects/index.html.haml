@@ -1,13 +1,11 @@
 - model_class = Project
 // encabezado(img root, page main title, page secondary title, bootstrap class)
-= encabezado('img-projects-page.jpg', I18n.t('projects.title'), 'false', 'span10 offset1')
+= encabezado('img-projects-page.jpg', I18n.t('projects.title'), 'false', 'span12')
 
 
 .row-fluid
-
-  = render 'list'
-
-
+  #portafolio-wrapper.span12
+    = render 'list'
 
 -#
   .page-header

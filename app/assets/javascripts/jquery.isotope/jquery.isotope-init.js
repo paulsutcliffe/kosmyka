@@ -1,16 +1,14 @@
 $(window).load(function(){
   var $container = $('#portafolio-listado');
-  
-  $container.imagesLoaded(function() {
+
     $container.isotope({
-    //  sortBy : 'random',
-      layoutMode: 'masonry',
       masonry: {
-    columnWidth: 110,
-    gutterWidth: 10
-  }
-    //  transformsEnabled: false,
-    });
+      columnWidth: 300
+    },
+    cellsByRow: {
+      columnWidth: 280,
+      rowHeight:188
+    }
   });
 
   $('#portafolio-botones ul a').click(function(){

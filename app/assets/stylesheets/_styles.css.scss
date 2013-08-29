@@ -255,6 +255,10 @@ h1.page-title {
 
 }
 
+#portafolio-wrapper {
+  margin:0 auto;
+  float: none;
+}
 
 #portafolio-botones {
   margin-bottom: 20px;
@@ -270,7 +274,7 @@ h1.page-title {
     }
   }
 }
-.isotope .isotope-item {width: 31%; list-style: none;
+.isotope .isotope-item { margin-bottom: 40px; width: 280px; list-style: none;
   h3 {margin: 0}
   p {margin: 0; font-size: 11px}
 
