@@ -46,6 +46,7 @@ es:
       default: ! '%d/%m/%Y'
       long: ! '%A, %d de %B del %Y'
       short: ! '%d de %b'
+      month: ! '%B de %Y'
     month_names:
     -
     - enero

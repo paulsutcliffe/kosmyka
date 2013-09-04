@@ -1,18 +1,22 @@
 #projects-carrusel.carousel-projects.slide
   %ol.carousel-indicators
-    %li{:"data-target" => "#projects-carrusel", :"data-slide-to" => "0", :class => "active"}
-      0
-    %li{:"data-target" => "#projects-carrusel", :"data-slide-to" => "1"}
-      1
-    %li{:"data-target" => "#projects-carrusel", :"data-slide-to" => "2"}
-      2
+    - @project.screenshots.each_with_index do |screenshot, index|
+      - if index == 0
+        %li{:"data-target" => "#projects-carrusel", :"data-slide-to" => index.to_s, :class => 'active'}
+          = index.to_s
+      - else
+        %li{:"data-target" => "#projects-carrusel", :"data-slide-to" => index.to_s}
+          = index.to_s
 
   <!-- Carousel items -->
   .carousel-inner
-    .item.active
-      = image_tag 'img-port.jpg'
-    .item
-      = image_tag 'img-port.jpg'
+    - @project.screenshots.each_with_index do |screenshot, index|
+      - if index == 0
+        .item.active
+          = image_tag screenshot.screenshot_url(:regular)
+      - else
+        .item
+          = image_tag screenshot.screenshot_url(:regular)
 
 
 

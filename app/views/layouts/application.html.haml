@@ -17,6 +17,8 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
+    = auto_discovery_link_tag(:atom, projects_url(format: "atom"))
+
 
   %body{id: bodyid, class: bodyclass}
     %header
@@ -32,6 +34,8 @@
             = render 'layouts/menu'
 
     %section#content
+      .container
+        = render 'layouts/notices'
       = yield
 
     %footer.container-fluid.region

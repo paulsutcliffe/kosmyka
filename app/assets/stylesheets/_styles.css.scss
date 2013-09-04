@@ -58,6 +58,10 @@ h2.title.region-title {text-align: center; margin-top: 20px}
     height: auto;
 }
 
+.alert-container {
+  margin-top: 40px;
+}
+
 .front #content-middle {padding-top: 30px}
 #content-middle { background: #fff; margin-top: 400px;}
 
@@ -166,7 +170,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
     textarea {@extend .textarea-tag}
   }
   .actions {
-    input[type="submit"] {border: 0; background: $yellow; padding: 10px 20px; text-transform: uppercase; float: right; margin-right: 10px}
+    input[type="submit"] {font-family: Dosis; border: 0; background: $yellow; padding: 10px 20px; text-transform: uppercase; float: right; margin-right: 10px}
   }
 }
 
@@ -182,7 +186,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 
 .redes-sociales {
   &.share {
-    a {@include size(45px, 45px); @include inline-block; text-align: center; @extend .transition; 
+    a {@include size(45px, 45px); @include inline-block; text-align: center; @extend .transition;
       &:hover {@extend .scale;}
       &.facebook {background: $purple}
       &.twitter {background: $gold}
@@ -320,7 +324,7 @@ hr {border-color: $gray}
 #projects-carrusel {position: relative;
   .carousel-indicators {
     top: 105%; right: -10px;
-    li {cursor: pointer; text-indent: 0; background: black; 
+    li {cursor: pointer; text-indent: 0; background: black;
       @extend .no-border-radius; @include size(30px, 30px); text-align: center; color: white; font-size: 18px; line-height: 170%}
   }
   .carousel-inner {

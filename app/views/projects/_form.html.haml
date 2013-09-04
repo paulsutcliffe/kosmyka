@@ -1,4 +1,4 @@
-= form_for @project, :html => { :multipart => true, :class => 'form-horizontal' } do |f|
+= nested_form_for @project, :html => { :multipart => true, :class => 'form-horizontal' } do |f|
   .control-group
     = f.label :name, :class => 'control-label'
     .controls
@@ -35,6 +35,16 @@
     = f.label :image, :class => 'control-label'
     .controls
       = f.file_field :image, :class => 'file_field'
+  = f.fields_for :screenshots do |screenshot_form|
+    .control-group
+      = screenshot_form.label :screenshot, :class => 'control-label'
+      .controls
+        = screenshot_form.file_field :screenshot, :class => 'file_field'
+    .form-actions
+      = screenshot_form.link_to_remove "Removes this screenshot", :class => 'btn'
+  .form-actions
+    = f.link_to_add "Add Screenshot", :screenshots, :class => 'btn'
+
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), projects_path, :class => 'btn'

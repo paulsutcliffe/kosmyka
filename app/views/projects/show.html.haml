@@ -6,8 +6,8 @@
 
 #proyect-actions.row
   .span12
-    = link_to image_tag('flecha-izquierda.png'), '', id: 'flecha-izquierda'
-    = link_to image_tag('flecha-derecha.png'), '', id: 'flecha-derecha'
+    = link_to image_tag('flecha-izquierda.png'), @project.previous_project, id: 'flecha-izquierda' if @project.previous_project
+    = link_to image_tag('flecha-derecha.png'), @project.next_project, id: 'flecha-derecha' if @project.next_project
 .row
   .span6
     = render 'bootstrap_slider'
@@ -15,10 +15,10 @@
     .dato
       %b Fecha:
       %p
-        = @project.launched 
+        = l @project.launched, :format => :month
 
-    .dato 
-      %b Cliente: 
+    .dato
+      %b Cliente:
       %p
         = @project.client
 
@@ -35,14 +35,14 @@
     = paragraph(@project.description)
 
     %p.proyect-links
-      %span.link-label 
-        Visita la web 
+      %span.link-label
+        Visita la web
       = link_to @project.url, @project.url, target: '_blank', class: 'btn external'
 
 -#
   .page-header
     %h1=t '.title', :default => model_class.model_name.human
-  
+
   %p
     %strong= model_class.human_attribute_name(:name) + ':'
     %br
@@ -72,8 +72,8 @@
     %strong= model_class.human_attribute_name(:type) + ':'
     %br
     = @project.kind
- 
-- if current_admin 
+
+- if current_admin
   .form-actions
     = link_to t('.back', :default => t("helpers.links.back")), projects_path, :class => 'btn'
     = link_to t('.edit', :default => t("helpers.links.edit")), edit_project_path(@project), :class => 'btn'
