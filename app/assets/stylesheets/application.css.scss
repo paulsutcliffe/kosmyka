@@ -12,10 +12,5 @@
  *= require twitter-bootstrap-static/bootstrap.css.erb
  *= require bootstrap_and_overrides
  *= require twitter-bootstrap-static/bootstrap
+ *= require_tree .
  */
-
-
-// @import 'bootstrap_and_overrides.css';
-@import 'variables.css.scss';
-@import 'mixins.css.scss';
-@import 'styles.css.scss';
