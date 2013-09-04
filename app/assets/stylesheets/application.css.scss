@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require twitter-bootstrap-static/bootstrap
  */
 
 
@@ -20,5 +21,3 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis:300);
 @import url(http://fonts.googleapis.com/css?family=Dosis:500);
 @import url(http://fonts.googleapis.com/css?family=Dosis:700);
-
-
