@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
   var container = document.querySelector('#masonry-container');
   var msnry = new Masonry( container, {
@@ -9,4 +10,21 @@ $(document).ready(function() {
   });
 
 
+});*/
+
+
+
+
+$(window).load(function(){
+	$('#masonry-container').masonry({
+	  itemSelector: '.item',
+          isFitWidth: true,
+	  //columnWidth: 240,
+          gutter: 10,
+	  animationOptions: {
+	    duration: 400
+	  }
+	})
 });
+
+
