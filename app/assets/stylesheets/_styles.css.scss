@@ -93,7 +93,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   .item {
     margin-bottom: 20px;
     .item-inner {overflow: hidden;
-      img {vertical-align: top}
+      img {vertical-align: top; width: auto}
       position: relative;
       p {@include absolute(bottom, left, -100%, 0px); margin: 0;
         -moz-transition: 0.3s ease-out all;
