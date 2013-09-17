@@ -77,8 +77,8 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   &:after {right: -20px}
 }
 
-.region {padding-top: 40px; padding-bottom: 60px; background: $bevel}
-.region.simple {background: none}
+.region {padding-top: 40px; padding-bottom: 60px; background: $bevel; background-color: white}
+.region.simple {background-image: none}
 
 .front #content-bottom .region {padding-bottom: 60px}
 
