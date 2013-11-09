@@ -20,7 +20,7 @@ $(window).load(function(){
 	  itemSelector: '.item',
           isFitWidth: true,
 	  //columnWidth: 240,
-          gutter: 10,
+          gutter: 20,
 	  animationOptions: {
 	    duration: 400
 	  }
