@@ -91,6 +91,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
   margin:0 auto;
   float: none;
   .item {
+    float: left; margin-right: 30px;
     margin-bottom: 20px;
     .item-inner {overflow: hidden;
       img {vertical-align: top; width: auto}
@@ -246,8 +247,10 @@ footer {
 }*/
 
 .servicio-item {
-  p, blockquote, h2.title {
-    color: $aqua;
+  @media (min-width: 800px) {
+    p, blockquote, h2.title {
+      color: $aqua;
+    }
   }
   .img-on {display: none}
   .img-off {@include inline-block}
@@ -289,11 +292,14 @@ h1.page-title {
     }
   }
 }
+#portafolio-listado .web,
 .isotope .isotope-item { margin-bottom: 40px; width: 280px; list-style: none;
   h3 {margin: 0}
   p {margin: 0; font-size: 11px}
 
 }
+
+#portafolio-listado .web {float: left; margin-right: 20px }
 
 
 #projects {
@@ -355,22 +361,19 @@ hr {border-color: $gray}
 
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 800px) {
+  .navbar-inner {padding-bottom: 50px !important}
+  .navbar .nav {float: none; margin-bottom: 20px;
+    li {margin-bottom: 5px}
+    a, span {text-align: center; background: $cyan; color: white !important; 
+    text-shadow: 0 0 0 transparent !important; margin: 0 !important}
 
+    a:hover, span:hover,
+    span {background: darken($cyan, 10%) !important;
+      &:after {display: none !important}
+    }
+  }
+
+  #footer,
+  .servicio-item {padding: 0 20px}
 }
-
-@media (min-width: 768px) and (max-width: 979px) {
-
-
-}
-
-@media (max-width: 480px) {
-
-}
-
-@media (max-width: 979px) {
-
-
-}
-
-

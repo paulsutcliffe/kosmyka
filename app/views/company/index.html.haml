@@ -1,12 +1,13 @@
-#content
-  #content-top.container-fluid
-    .row-fluid
-      #parallaxContainer.span12
-        = image_tag 'img-servicios.jpg'
-  #content-middle
-    %h1.page-title
-      = I18n.t('services.index')
-    .container-fluid.region.simple
+
+#content-top.container-fluid
+  .row-fluid
+    #parallaxContainer.span12
+      = image_tag 'img-servicios.jpg'
+#content-middle
+  %h1.page-title
+    = I18n.t('services.index')
+  .container.region.simple
+    .row
       .span12.main-section-page
         %h2.title.region-title
           = image_tag 'img-rocket.png', class: 'not-full'
