@@ -37,7 +37,6 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem 'unicorn-worker-killer'
 gem "nested_form"
 gem "twitter-bootstrap-rails"
 gem "rvm-capistrano"
