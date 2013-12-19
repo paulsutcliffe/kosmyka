@@ -1,6 +1,8 @@
 en:
   projects:
     title: Portfolio
+  questions:
+    title: FAQ
   services:
     title: Services
     index: The Company

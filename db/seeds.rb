@@ -11,3 +11,7 @@ FactoryGirl.create :admin
 12.times do
   FactoryGirl.create :project
 end
+
+8.times do
+  FactoryGirl.create :question
+end

@@ -1,6 +1,8 @@
 es:
   projects:
     title: Portafolio
+  questions:
+    title: Preguntas Frecuentes
   services:
     title: Servicios
     index: La Empresa

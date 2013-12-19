@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), questions_path
+  = link_to t('edit'), edit_question_path(@question)
+
+%dl
+  %dt= Question.human_attribute_name :question
+  %dd= @question.question
+  %dt= Question.human_attribute_name :answer
+  %dd= @question.answer

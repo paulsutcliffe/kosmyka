@@ -1,4 +1,7 @@
 Kosmyka::Application.routes.draw do
+  resources :questions
+
+
   devise_for :admins
 
   resources :projects

@@ -1,0 +1,18 @@
+- model_class = Question
+// encabezado(img root, page main title, page secondary title, bootstrap class)
+= encabezado('img-questions-page.jpg', I18n.t('questions.title'), 'false', 'span12')
+
+.row-fluid
+  #questions-wrapper.span12
+    %p.lead La duda es uno de los nombres de la inteligencia.
+    Jorge Luis Borges.
+
+    - for question in @questions
+      %h2
+        = question.question
+        %p
+          = question.answer
+      - if current_admin
+        .action= link_to t('show'), question
+        .action= link_to t('edit'), edit_question_path(question)
+        .action= link_to t('destroy'), question, :confirm => ('¿Estás seguro?'), :method => :delete
