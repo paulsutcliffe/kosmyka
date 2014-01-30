@@ -21,8 +21,7 @@ display: none;
 #preload-v{
 background: url('img-servicios-page.jpg') no-repeat;
 display: none;
-}
-
+} 
 body {color: $gray; font-family: Dosis}
 
 p, blockquote {@extend .paragraph-default}
