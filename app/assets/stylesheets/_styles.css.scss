@@ -1,5 +1,28 @@
 @import 'mixins.css.scss';
 
+#preload{
+background: url('img-home.jpg') no-repeat;
+display: none;
+height: 1;
+width: 1;
+}
+#preload-q{
+background: url('img-questions-page.jpg') no-repeat;
+display: none;
+}
+#preload-s{
+background: url('img-servicios.jpg') no-repeat;
+display: none;
+}
+#preload-p{
+background: url('img-projects-page.jpg') no-repeat;
+display: none;
+}
+#preload-v{
+background: url('img-servicios-page.jpg') no-repeat;
+display: none;
+}
+
 body {color: $gray; font-family: Dosis}
 
 p, blockquote {@extend .paragraph-default}
@@ -377,3 +400,7 @@ hr {border-color: $gray}
   #footer,
   .servicio-item {padding: 0 20px}
 }
+
+
+
+

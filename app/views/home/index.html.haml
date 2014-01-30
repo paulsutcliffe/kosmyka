@@ -1,10 +1,10 @@
 - content_for :javascript do
   = javascript_include_tag 'masonry.pkgd.min.js', 'masonry-init.js'
-
+#preload
 #content-top.container-fluid
   .row-fluid
     #parallaxContainer.span12
-      = image_tag 'img-home.jpg', class => 'parallax'
+      = image_tag 'img-home.jpg'
 
 
     #content-middle.container-fluid.masonry-div.region
@@ -106,3 +106,4 @@
 
   .row-fluid
     = render 'contacts/form'
+
