@@ -1,5 +1,8 @@
-$(document).ready(function() {
+$(window).load(function() {
   parallax_margin();
+});
+
+$(document).ready(function(){
 });
 
 $(window).resize(function() {
@@ -13,3 +16,4 @@ function parallax_margin() {
   content_margin = p_height - h_height;
   $('#content-middle').css('margin-top', content_margin);
 }
+

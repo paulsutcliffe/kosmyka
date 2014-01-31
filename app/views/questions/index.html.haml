@@ -8,12 +8,17 @@
   #questions-wrapper.span12
     %p.lead La duda es uno de los nombres de la inteligencia.
     Jorge Luis Borges.
-
-    - for question in @questions
-      %h2
-        = question.question
-        %p
-          = question.answer
+    .accordion#accordion2
+      - @questions.each_with_index do |question, index|
+        .accordion-group
+          .accordion-heading
+            %a{:class => 'accordion-toggle', :data => {'toggle' => 'collapse', 'parent' => '#accordion2'  }, :href => "#collapseOne-#{index}" }
+              %h2  
+                = question.question
+            %div{:id => "collapseOne-#{index}", :class => 'accordion-body collapse'}
+              .accordion-inner
+                %p
+                  = question.answer
       - if current_admin
         .action= link_to t('show'), question
         .action= link_to t('edit'), edit_question_path(question)

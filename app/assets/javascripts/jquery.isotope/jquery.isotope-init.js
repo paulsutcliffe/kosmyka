@@ -18,10 +18,9 @@ $(window).load(function(){
   });
 
 
-
 $(window).on('resize', function(){
     $container.isotope('reLayout')
-});
+})
 
 
 
