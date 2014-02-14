@@ -80,6 +80,7 @@ h2.title.region-title {text-align: center; margin-top: 20px}
 #parallaxContainer img {
     width: 100%;
     height: auto;
+    margin-top:73px;
 }
 
 .alert-container {
@@ -365,7 +366,7 @@ hr {border-color: $gray}
     }
   }
 }
-
+#content-bottom {padding: 0px 20px;}
 @media (min-width: 768px) and (max-width: 979px) {
 
 
@@ -375,7 +376,8 @@ hr {border-color: $gray}
 @media (max-width: 767px) {
   body {padding-left: 0; padding-right: 0}
   #content-middle {margin-top: 200px}
-
+.container-fluid{padding-left: 20px; padding-right: 20px;}
+.container{padding-left: 20px; padding-right: 20px;}
 }
 
 @media print {
@@ -383,7 +385,7 @@ hr {border-color: $gray}
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 979px) {
   .navbar-inner {padding-bottom: 50px !important}
   .navbar .nav {float: none; margin-bottom: 20px;
     li {margin-bottom: 5px}
@@ -395,7 +397,7 @@ hr {border-color: $gray}
       &:after {display: none !important}
     }
   }
-
+  #parallaxcontainer img{margin-top:133px;}
   #footer,
   .servicio-item {padding: 0 20px}
 }
