@@ -271,7 +271,7 @@ footer {
 .servicio-item {
   @media (min-width: 800px) {
     p, blockquote, h2.title {
-      color: $aqua;
+      //color: $aqua;
     }
   }
   .img-on {display: none}
@@ -280,8 +280,8 @@ footer {
     p, blockquote, h2.title {
       color: $gray;
     }
-    .img-on {@include inline-block}
-    .img-off {display: none}
+    //.img-on {@include inline-block}
+   // .img-off {display: none}
   }
 }
 
