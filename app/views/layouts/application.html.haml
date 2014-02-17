@@ -37,7 +37,7 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="favicon.ico" rel="shortcut icon")
 
-    = javascript_include_tag "application"
+    = javascript_include_tag "application", "http://www.kirupa.com/prefixfree.min.js", "parallax.js"
     = yield :javascript
 
     = auto_discovery_link_tag(:atom, projects_url(format: "atom"))
