@@ -1,5 +1,5 @@
 = form_for @contact, :html => { :class => 'form-horizontal' } do |f|
-  .span4.offset2
+  .span5.offset1
     .field
       = f.label :name, class: 'span3'
       = f.text_field :name, class: 'span9'
@@ -9,7 +9,7 @@
     .field
       = f.label :phone, class: 'span3'
       = f.text_field :phone, class: 'span9'
-  .span4
+  .span5
     .field
       = f.label :message, class: 'span3'
       = f.text_area :message, class: 'span9'
