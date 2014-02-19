@@ -46,7 +46,7 @@ Kosmyka::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ['masonry.pkgd.min.js', 'masonry-init.js', 'nested_form.js', 'jquery.isotope/jquery.isotope.min.js', 'jquery.isotope/jquery.isotope-init.js', 'jquery.isotope/isotope.css']
+  config.assets.precompile += ['prefixfree.min.js', 'parallax.js', 'masonry.pkgd.min.js', 'masonry-init.js', 'nested_form.js', 'jquery.isotope/jquery.isotope.min.js', 'jquery.isotope/jquery.isotope-init.js', 'jquery.isotope/isotope.css']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

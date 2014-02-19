@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require parallax
+//= require prefixfree.min.js
 //= require scripts
